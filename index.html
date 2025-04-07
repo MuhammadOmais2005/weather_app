@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Boostrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Document</title>
+    <!-- GALLERIN LINK -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <!-- FONT OSTWALD -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body id="aaaa">
+    <!-- https://codervent.com/maxton/demo/vertical-menu/index.html -->
+
+
+
+
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        background-color: #0f1535;
+        height: 2000px;
+        overflow-x: hidden;
+    }
+</style>
+
+<!-- ROUGH START -->
+
+<!-- 
+<style>
+    .btii {
+        box-shadow: 0px 0px 5px 5px  #059dff;
+        backdrop-filter: blur(10px);
+        backdrop-filter: (50px);
+        
+    }
+    .btii:hover {
+        box-shadow: 0px 0px 15px 3px  #059dff;
+    }
+</style>
+
+<style>
+    /* #readings {
+        transform: translateX(-100%);
+    } */
+
+</style>
+
+<div class="container d-flex justify-content-center fixed-top" id="readings">
+    <div class="row d-flex flex-column align-items-center justify-content-around  bg-danger " style="width: 100%; height: 100vh; top: 0px; left: 0px; z-index: 10; overflow-y: scroll;" id="klklo">
+        <div class="col-10 col-md-6 col-lg-6"> <input class="form-control fs-3" type="number" name="" id="" placeholder="Enter Temperature" id="p1"></div>
+        <div class="col-10 col-md-6 col-lg-6"> <input class="form-control fs-3" type="number" name="" id="" placeholder="Enter Temperature" id="2"></div>
+        <div class="col-10 col-md-6 col-lg-6"> <input class="form-control fs-3" type="number" name="" id="" placeholder="Enter Temperature" id="3"></div>
+        <div class="col-10 col-md-6 col-lg-6"> <input class="form-control fs-3" type="number" name="" id="" placeholder="Enter Temperature" id="4"></div>
+        <div class="col-10 col-md-6 col-lg-6"> <input class="form-control fs-3" type="number" name="" id="" placeholder="Enter Temperature" id="5"></div>
+        <div class="col-10 col-md-6 col-lg-6"> <input class="form-control fs-3" type="number" name="" id="" placeholder="Enter Temperature" id="6"></div>
+        <div class="col-10 col-md-6 col-lg-6"> <input class="form-control fs-3" type="submit" name="" id="" value="CLOSE" onclick="closes()"></div>
+    </div>
+</div>
+ -->
+
+
+<!-- ROGH END -->
+
+<!-- MAP  START-->
+
+
+<style>
+    .ppp {
+        transform: translateX(-100%);
+        z-index: 10;
+        box-shadow: 0 0 15px #dc354698;
+        transition: 0.5s ease-in;
+    }
+    .mmap:hover {
+    box-shadow: 0 0 25px #dc3545;
+    }
+    .red {
+        transform: translateX(0%);
+        color: #059bff92;
+    }
+</style>
+
+        
+
+<div class="d-flex align-items-center justify-content-center ms-auto ppp g-0" id="ppp" style="position: fixed; z-index: 60; width: 100vw; background-color: #0000004a; height: 100vh;" id="map">
+    <div class="row d-flex align-items-center justify-content-center px-0"  style="width: 80%; height: 80vh; background-color: ;">
+        <div class="col-12 h-100 " style="position: relative;">
+            <i class="fa-solid fa-xmark fs-1" style="position: absolute; right: 20px; top: 10px;" onclick="abcde()"></i>
+            <iframe 
+                id="mmap" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.289010099222!2d67.1056210742317!3d24.922222542785534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb338c41059ace9%3A0x59f6e847f82104b2!2sSafari%20Park!5e0!3m2!1sen!2s!4v1743832766543!5m2!1sen!2s&zoom=100" 
+                width="100%" 
+                height="100%" 
+                style="border:2px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    
+    function abcde(){
+        document.getElementById("ppp").classList.remove("red");
+    };
+    function fghi(){
+        document.getElementById("ppp").classList.add("red");
+        // document.getElementById("loca").style.backgroundColor ="red";
+        // document.getElementById("aaaa").style.display ="none";
+    }
+</script>
+
+
+<!-- MAP END -->
+
+
+
+<!-- BACGROUND GRADIENT START -->
+
+
+<div style="position: fixed; z-index: -1;">
+    <div style="width: 100vw; height: 100vh; background-color: #0f1535; position: relative; overflow: hidden;">
+        <div style="width: 500px; height: 500px; background-image: linear-gradient(45deg, #059dff,#059dff,#059bff00) ;position: absolute; bottom: -150px; left: -150px; border-radius: 50%; opacity: 0.5; filter: blur(100px);"></div>
+
+        <div style="width: 500px; height: 500px; background-image: linear-gradient(45deg, #fb5343,#6549d5,#059bff00) ;position: absolute; top: -150px; right: -150px; border-radius: 50%; opacity: 0.5; filter: blur(100px);"></div>
+    </div>
+</div>
+
+
+
+<!-- BACGROUND GRADIENT END -->
+
+
+
+
+
+<!-- SLIDER STAT -->
+
+
+<style>
+    .tt {
+        font-size: 18px;
+        font-family: "Rubik", serif;
+        font-optical-sizing: auto;
+        font-weight: 450;
+        /* height: 50px; */
+        font-style: normal;
+        border-bottom: 1px solid #777;
+        color: white;
+    }
+    .tt:hover {
+        color: #059dff;
+        border-bottom: 2px solid #059dff;
+        }
+
+    .icc {
+        color: #777;
+        /* border-bottom: 1px solid #777; */
+        }
+
+    .issb {
+        border-left: 1px solid #777;
+        border-right: 1px solid #777;
+        }
+
+    .iss:hover {
+        color: #059dff;
+        }
+    body {
+        /* overflow-x: hidden; */
+    }
+        
+    .slsl {
+        position: fixed;
+        /* z-index: 1; */
+        top: 0px;
+        left: 0px;
+        /* display: none; */
+        transform: translateX(100%);
+        transition: 1s;
+        transition-timing-function: ease-in;
+        z-index: 10;
+        }
+
+</style>
+    
+    <div class="container-fluid px-0 mx-0 slsl sticky-top" id="slsl">
+        <div class="row flex-row-reverse px-0 mx-0" style="width: calc(100vw-12); height: 100vh; background-color: #0f1535cc; overflow: hidden;">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-8 d-flex flex-column mx-0 px-0" id="leftsl" style="height: 100%; background-color: #0f1535">
+                <div class="row px-0 mx-0 icc py-2">
+                    <div class="col iss px-0" style="text-align: center; background-color: ; color: ;"><i class="fa-solid fa-phone-volume fs-3"></i></div>
+                    <div class="col iss issb px-0" style="text-align: center; background-color: ;"><i class="fa-solid fa-location-dot fs-3" onclick="fghi()" id="loca"></i></div>
+                    <div class="col fs-4 iss px-0" id="clcl"  style="text-align: center; background-color: ;">CLOSE</div>
+                <div class="row d-flex flex-column mx-0 px-0">
+                    <span class="col d-flex flex-row justify-content-between tt py-2"><span><a href="#home" style="text-decoration: none; color: #059dff;">HOME</a></span><span>+</span></span>
+                    <span class="tt py-2"><a href="#about" style="text-decoration: none; color: #059dff;">ABOUT</a></span>
+                    <span class="tt py-2"><a href="#service" style="text-decoration: none; color: #059dff;">SERVICE</a></span>
+                    <span class="tt py-2"><a href="portfolio" style="text-decoration: none; color: #059dff;">PORTFOLIO</a></span>
+                    <span class="col d-flex flex-row justify-content-between tt py-2"><span><a href="#pages" style="text-decoration: none; color: #059dff;">PAGES</a></span><span>+</span></span>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- SLIDER END -->
+
+
+
+<!-- HEADER START  -->
+
+    
+<style>
+        .aj {
+            /* font-family: "Rubik", serif; */
+            font-optical-sizing: auto;
+            font-weight: 300;
+            /* font-weight: 100; */
+            /* font-style: normal; */
+            /* background-color: #d39121; */
+        }
+        .hg {
+            height: 100px;
+            border-bottom: 0px solid #dc3545;
+            transition: 0.5s;
+        }
+        .hg:hover {
+            border-bottom: 1px solid #dc3545;
+            height: 100px;
+            /* background-color: #d39121; */
+        }
+        .header {
+            /* background-color: #08d665; */
+            border-bottom: 1px solid ;
+            z-index: 1;
+            position: sticky;
+        }
+        .logo {
+            height: 100px;
+        }
+        @media screen and (max-width: 800px) {
+            .logo {
+                height: 80px;
+            }
+        }
+        @media screen and (max-width: 576px) {
+            .logo {
+                height: 80px;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            .logo {
+                height: 80px;
+            }
+        }
+        .hhh {
+            box-shadow: 0 0 5px 5px #dc3545;
+            /* box-shadow: 0 0 5px 5px #059bff29; */
+            backdrop-filter: blur(5px);
+        }
+
+
+</style> 
+
+
+
+    <div class="container bg-primarys hhh" style="position: sticky; top: 0px; z-index: 9;">        
+        <div class="row d-flex flex-row justify-content-between align-items-center header px-sm-5 px-3 bg-dangers ">
+            <img src="NED Logo.png" alt="" class="w-auto logo">
+            <div class="col-6 d-none d-lg-block">
+                <div class="row d-flex justify-content-between aj align-content-stretch" style="color: #059dff; font-weight: 600;">
+                    <span class="w-auto hg d-flex flex-column justify-content-center"><a href="#home" style=" text-decoration: none">HOME</a></span>
+                    <span class="w-auto hg d-flex flex-column justify-content-center"><a href="#about" style=" text-decoration: none">ABOUT</a></span>
+                    <span class="w-auto hg d-flex flex-column justify-content-center" style=" text-decoration: none"><a href="#service" style="text-decoration: none;">SERVICE</a></span>
+                    <span class="w-auto hg d-flex flex-column justify-content-center" style=" text-decoration: none"><a href="#porfolio" style="text-decoration: none;">PORTFOLIO</a></span>
+                    <span class="w-auto hg d-flex flex-column justify-content-center"><a href="#pages" style="text-decoration: none;">PAGES</a></span>
+                </div>
+            </div>
+            <i class="fa-solid fa-bars w-auto fs-1" id="menn" style="color: #059dff;"></i>
+        </div>
+</div>
+
+
+
+<!-- HEADER END -->
+
+
+
+<!-- GRApHICS START -->
+
+<style>
+    .image-3 {
+        transition: transform 10s ease-out;
+        /* transition: 6s;
+        transition-timing-function: linear; */
+        }
+    .parameter_container {
+    background-color: #0f153523;
+    border-radius: 5%;
+    box-shadow: 5px 5px 15px 5px #181f4a;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    transform: scale(1);
+    /* transform: perspective(40cm); */
+    transition: 0.5s ease-in;
+}
+.parameter_container:hover {
+    transform: scale(1.01);
+}
+
+
+
+
+.card {
+/* width: 450px; */
+/* height: 300px; */
+border-radius: 10px; 
+box-shadow: 20px 20px 75px rgba(0, 0, 0, 0.5);  
+
+-webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+-webkit-transition: 0.1s;
+      transition: 0.1s; 
+}
+.containeres {
+/* width: 100%; */
+/* height: 100%; */
+/* display: flex;
+align-items: center;
+justify-content: center; */
+
+-webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+-webkit-transform: perspective(800px);
+      transform: perspective(800px);    
+}
+.card0 {
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+}
+.containeres {
+    box-shadow: 0 0 15px #dc354698;   
+}
+.containeres:hover {
+    box-shadow: 0 0 25px #dc3545;   
+}
+.card0:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 1);  /* Enhanced glow on hover */
+}
+
+.ggj {
+    font-family: "Oswald", serif;
+    font-weight: 900;
+    text-align: center;
+}
+</style>
+
+
+<div id="#home" class="bg-primarys parameter_container_wrapper  containeres container my-5  px-md-0" style="height: 600px;border: 1px solid ;">
+    <div class="parameter_container h-100 card card0 row" id="card0" style="position: relative;">
+        <div style="position: absolute; width: 100%; height: 100%;top: 0px">
+            <div class="row d-flex flex-column justify-content-around align-items-center  h-100">
+                <div class="col fs-1 ggj mt-5" style="color: white;">SENSOR BASED WATER QUALITY MONITORING USING IoT & REAL TIME</div>
+                <div class="col fs-1 ggj"  style="color: white;">Batch 2021</div>
+                <div class="col fs-1 ggj"  style="color: white;">Group Members</div>
+                <div class="col fs-1 ggj"  style="color: white;">Sabahat Shoaib CE- 21302, Hajra Rehman CE- 21306, Umaima Waseem CE- 21309.</div>
+                <div class="col fs-1 ggj"  style="color: white;">Project Advisor</div>
+                <div class="col fs-1 ggj"  style="color: white;">Dr. Abdul Ghaffar Memon</div>
+                
+            </div>
+            <div class="card__content0 d-none"></div>
+            <div class="card__gloss0 d-none"></div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    (function() {
+  "use strict";
+  
+  var card = document.getElementById('card0'),
+      gloss = card.querySelector('.card__gloss0'),
+      content = card.querySelector('.card__content0'),
+      width = window.innerWidth,
+      height = window.innerHeight;
+  
+  
+  function init() {
+    bindMouse();
+    
+    // Initial tilt
+    light(350, -125);
+    tilt(350, -125);    
+  }
+  
+  function bindMouse() {
+    document.addEventListener('mousemove', (event) => {
+      let x = event.clientX - (width / 2),
+          y = event.clientY - (height / 2);
+
+      light(x, y);
+      tilt(x, y);
+    });
+  }
+  
+  
+  function light(x, y) {
+    let angle = (Math.atan2(y, x) * 180) / Math.PI - 90;
+    
+    gloss.style.background = 'linear-gradient(' + angle + 'deg, rgba(255, 255, 255,' + y / height * .9 + ') 0%, rgba(255, 255, 255, 0) 80%)';    
+  }
+  
+  function tilt(x, y) {
+    let force = 10,
+        rx = (x / width) * force,
+        ry = (y / height) * -force;
+
+    card.style.transform = 'rotateY(' + (rx) + 'deg) rotateX(' + (ry) + 'deg)';    
+    // content.style.transform = 'translateX(' + (rx * .75) + 'px) translateY(' + (ry * .75) + 'px)';
+  }
+  
+  
+  
+  
+  init();
+  
+})();
+</script>
+
+
+<!-- GRApHICS END -->
+
+
+
+
+
+<!-- CAURASEL START -->
+
+
+    <div class="containers container">
+      <div class="slider bg-image image-1 active">
+        <h3 class="h3"></h3>
+      </div>
+      <div class="slider bg-image image-2">
+        <h3 class="h3"></h3>
+      </div>
+      <div class="slider bg-image image-3" id="image-3">
+        <h3 class="h3"></h3>
+      </div>
+      <div class="slider bg-image image-4">
+        <h3 class="h3"></h3>
+      </div>
+      <div class="slider bg-image image-5">
+        <h3 class="h3"></h3>
+      </div>
+    </div>
+
+    <script>
+        // Simulate a click on the image when the page loads
+        window.onload = function() {
+          document.getElementById('image-3').click();
+        }
+    </script>
+
+<!-- CAURASEL END -->
+
+
+
+<!-- ROUGH START -->
+
+
+<!-- 
+<style>
+    .btii {
+        box-shadow: 0px 0px 5px 5px  #059dff;
+        backdrop-filter: blur(10px);
+        backdrop-filter: (50px);
+        
+    }
+    .btii:hover {
+        box-shadow: 0px 0px 15px 3px  #059dff;
+    }
+</style>
+
+<style>
+    /* #readings {
+        transform: translateX(-100%);
+    } */
+
+</style>
+
+<div class="container d-flex justify-content-center" id="readings" style="">
+    <div class="row d-flex flex-column align-items-center justify-content-around  bg-danger" style="width: 100%; height: 100vh; position: fixed; top: 0px; left: 0px; z-index: 20; overflow-y: scroll;" id="klklo">
+        <div class="col-10 col-md-6 col-lg-6"> <input class="form-control fs-3" type="number" name="" id="" placeholder="Enter Temperature"></div>
+        <div class="col-10 col-md-6 col-lg-6"> <input class="form-control fs-3" type="number" name="" id="" placeholder="Enter Temperature"></div>
+        <div class="col-10 col-md-6 col-lg-6"> <input class="form-control fs-3" type="number" name="" id="" placeholder="Enter Temperature"></div>
+        <div class="col-10 col-md-6 col-lg-6"> <input class="form-control fs-3" type="number" name="" id="" placeholder="Enter Temperature"></div>
+        <div class="col-10 col-md-6 col-lg-6"> <input class="form-control fs-3" type="number" name="" id="" placeholder="Enter Temperature"></div>
+        <div class="col-10 col-md-6 col-lg-6"> <input class="form-control fs-3" type="number" name="" id="" placeholder="Enter Temperature"></div>
+        <div class="col-10 col-md-6 col-lg-6"> <input class="form-control fs-3" type="submit" name="" id="" value="CLOSE" onclick="close()"></div>
+    </div>
+</div> -->
+<!-- <div id="sde"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ipsa itaque aliquid voluptatum totam? Deleniti, vitae. Laboriosam illum minima doloremque. Maiores temporibus excepturi tempore sit doloribus iure laborum quo architecto!</div> -->
+<!-- <style>
+    .toggles {
+        /* transform: translateX(100%); */
+        border: 10px solid blue;
+        display: none;
+        background-color: #059dff;
+    }
+</style> -->
+
+
+
+<!-- ROUGH  END-->
+
+<!-- SUBBBIT -->
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col col-md-8 col-lg-6">
+            <input onclick="lkj()"  type="button" class="form-control btii fs-3" style="background: linear-gradient(95deg, #059dff 15%, #6549d5 45%, #e33fa1 75%, #fb5343 100%); color: white; font-family: Oswald;" value="GET READINGS" >
+        </div>
+    </div>
+</div>
+
+
+<!-- PARAMETR START -->
+
+
+
+<style>
+        .parameter_container {
+        background-color: #0f153523;
+        border-radius: 5%;
+        box-shadow: 5px 5px 15px 5px #181f4a;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transform-style: preserve-3d;
+        transform: scale(1);
+        /* transform: perspective(40cm); */
+        transition: 0.5s ease-in;
+    }
+    .parameter_container:hover {
+        transform: scale(1.01);
+    }
+
+
+
+
+    .card {
+  /* width: 450px; */
+  /* height: 300px; */
+  border-radius: 10px; 
+  box-shadow: 20px 20px 75px rgba(0, 0, 0, 0.5);  
+
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: 0.1s;
+          transition: 0.1s; 
+    }
+    .containeres {
+  /* width: 100%; */
+  /* height: 100%; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(800px);
+          transform: perspective(800px);    
+}
+.ghu {
+    font-family: "Oswald", serif;
+}
+</style>
+
+<div class="container ghu">
+    <div class="row">
+        <div class="col-lg-6 col-12 p-3 bg-primarys parameter_container_wrapper" style="height: 400px;">
+            <div class="parameter_container h-100" style="color: white;">
+                <div class="row h-100">
+                    <div class="col d-flex flex-column justify-content-center align-items-center">
+                        <img src="th.png" width="100%" alt="">
+                    </div>
+                    <div class="col"  style="height: 100%;">
+                        <div class="row d-flex flex-column bg-warnings justify-content-center h-100"  style="height: 100%;">
+                            <div class="col-6 bg-dangers" style="font-size: 100px; font-weight: bold;"><span id="a1">0</span></div>
+                            <div class="col-6 bg-dangers" style="font-size: 30px; font-weight: bold;">Temperature</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-12 p-3 bg-primarys parameter_container_wrapper"  onclick="opens()" style="height: 400px;">
+            <div class="parameter_container h-100" style="color: white;">
+                <div class="row h-100">
+                    <div class="col d-flex flex-column justify-content-center align-items-center">
+                        <img src="pH.png" width="100%" alt="">
+                    </div>
+                    <div class="col"  style="height: 100%;">
+                        <div class="row d-flex flex-column bg-warnings justify-content-center h-100"  style="height: 100%;">
+                            <div class="col-6 bg-dangers" style="font-size: 100px; font-weight: bold;"><span id="b">0</span></div>
+                            <div class="col-6 bg-dangers" style="font-size: 50px; font-weight: 500;">pH</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-12 p-3 bg-primarys parameter_container_wrapper" style="height: 400px;">
+            <div class="parameter_container h-100" style="color: white;">
+                <div class="row h-100">
+                    <div class="col d-flex flex-column justify-content-center align-items-center">
+                        <img src="orp.png" width="100%" alt="">
+                    </div>
+                    <div class="col"  style="height: 100%;">
+                        <div class="row d-flex flex-column bg-warnings justify-content-center h-100"  style="height: 100%;">
+                            <div class="col-6 bg-dangers" style="font-size: 100px; font-weight: bold;"><span id="c">0</span></div>
+                            <div class="col-6 bg-dangers" style="font-size: 30px; font-weight: bold;">Oxidation Reduction Process</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-12 p-3 bg-primarys parameter_container_wrapper" style="height: 400px;">
+            <div class="parameter_container h-100" style="color: white;">
+                <div class="row h-100">
+                    <div class="col d-flex flex-column justify-content-center align-items-center">
+                        <img src="tds (2).png" width="100%" alt="">
+                    </div>
+                    <div class="col"  style="height: 100%;">
+                        <div class="row d-flex flex-column bg-warnings justify-content-center h-100"  style="height: 100%;">
+                            <div class="col-6 bg-dangers" style="font-size: 100px; font-weight: bold;"><span id="d">0</span></div>
+                            <div class="col-6 bg-dangers" style="font-size: 30px; font-weight: bold;">Total Dissolve Solid</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-12 p-3 bg-primarys parameter_container_wrapper" style="height: 400px;">
+            <div class="parameter_container h-100" style="color: white;">
+                <div class="row h-100">
+                    <div class="col d-flex flex-column justify-content-center align-items-center">
+                        <img src="cond.png" width="100%" alt="">
+                    </div>
+                    <div class="col"  style="height: 100%;">
+                        <div class="row d-flex flex-column bg-warnings justify-content-center h-100"  style="height: 100%;">
+                            <div class="col-6 bg-dangers" style="font-size: 100px; font-weight: bold;"><span id="e">0</span></div>
+                            <div class="col-6 bg-dangers" style="font-size: 30px; font-weight: bold;">Electrical Conductivity</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-12 p-3 bg-primarys parameter_container_wrapper" style="height: 400px;">
+            <div class="parameter_container h-100" style="color: white;">
+                <div class="row h-100">
+                    <div class="col d-flex flex-column justify-content-center align-items-center">
+                        <img src="tur.png" width="100%" alt="">
+                    </div>
+                    <div class="col"  style="height: 100%;">
+                        <div class="row d-flex flex-column bg-warnings justify-content-center h-100"  style="height: 100%;">
+                            <div class="col-6 bg-dangers" style="font-size: 100px; font-weight: bold;"><span id="f">0</span></div>
+                            <div class="col-6 bg-dangers" style="font-size: 30px; font-weight: bold;">Turbidity</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- PARAMETR END -->
+
+
+
+
+<script>
+    let a = 0;
+    function closes(){
+        document.getElementById("readings").style.transform = "translateX(-100%)";
+        a = 0;
+    };
+    document.getElementById("readings").style.transform = "translateX(-100%)";
+
+    
+            // const q = document.getElementById("p1").value;
+            // const w = document.getElementById("2").value;
+            // const ee = document.getElementById("3").value;
+            // const r = document.getElementById("4").value;
+            // const t = document.getElementById("5").value;
+            // const y = document.getElementById("6").value;
+
+
+            // const aay = document.getElementById("a1");
+            // const b = document.getElementById("b");
+            // const c = document.getElementById("c");
+            // const d = document.getElementById("d");
+            // const e = document.getElementById("e");
+            // const f = document.getElementById("f");
+
+    function opens(){
+        a++;
+        if(a == 5){
+            document.getElementById("readings").style.transform = "translateX(0%)";
+
+        };
+    };
+    // aa.innerHTML = "a";   
+    aay.style.backgroundColor = "red";   
+    function lkj(){
+    //  aay.innerHTML = "a";  
+    //  document.getElementById("readings").style.transform = "translateX(0%)";
+    document.getElementById("a1").innerHTML = "p";
+    }
+</script>
+<style>
+    /* #a {
+        background-color: rebeccapurple;
+    } */
+</style>
+    
+<!-- <div id="about" style="color: white;">klaks;;kl;l</div> -->
+    <!-- SLIDER START -->
+
+
+
+
+
+
+    <script>
+        let menu = document.getElementById("menn");
+        let slider = document.getElementById("slsl");
+        let leftslider = document.getElementById("leftsl");
+        let close = document.getElementById("clcl");
+        menu.addEventListener("click",ppp);
+        function ppp(){
+            // slider.style.display="block";
+            slider.style.transform="translateX(0%)";
+        }
+        leftslider.addEventListener("mouseleave", eee);
+        function eee(){
+            slider.style.transform="translateX(100%)";
+            // slider.style.display="none";
+        }
+        close.addEventListener("click", clll);
+        function clll(){
+            slider.style.transform="translateX(100%)";
+        }
+    </script>
+    
+
+
+
+  <!-- Start your project here-->
+  <!-- Carousel wrapper -->
+  <div
+    id="carouselMultiItemExample"
+    class="carousel slide carousel-dark text-center"
+    data-mdb-ride="carousel"
+  
+    <!-- Inner -->
+    <div class="carousel-inner py-4">
+      <!-- Single item -->
+      <div class="carousel-item active">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <img
+                class="rounded-circle shadow-1-strong mb-4"
+                src="profile.webp"
+                alt="avatar"
+                style="width: 150px;"
+              />
+              <h5 class="mb-3" style="color: #059dff; font-family: Oswald">Umaima Waseem</h5>
+              <p style="color: #059dff; font-family: Oswald;">CE- 21309</p>
+              <p class="text-muted">
+                <i class="fas fa-quote-left pe-2"></i>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
+                officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+              </p>
+              <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                <li><i class="fas fa-star fa-sm"></i></li>
+                <li><i class="fas fa-star fa-sm"></i></li>
+                <li><i class="fas fa-star fa-sm"></i></li>
+                <li><i class="fas fa-star fa-sm"></i></li>
+                <li><i class="fas fa-star fa-sm"></i></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4 d-none d-lg-block">
+              <img
+                class="rounded-circle shadow-1-strong mb-4"
+                src="profile.webp"
+                alt="avatar"
+                style="width: 150px;"
+              />
+              <h5 class="mb-3" style="color: #059dff; font-family: Oswald">Hajra Rehman</h5>
+              <p style="color: #059dff; font-family: Oswald">CE- 21306</p>
+              <p class="text-muted">
+                <i class="fas fa-quote-left pe-2"></i>
+                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+                suscipit laboriosam, nisi ut aliquid commodi.
+              </p>
+              <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                <li><i class="fas fa-star fa-sm"></i></li>
+                <li><i class="fas fa-star fa-sm"></i></li>
+                <li><i class="fas fa-star fa-sm"></i></li>
+                <li><i class="fas fa-star fa-sm"></i></li>
+                <li>
+                  <i class="fas fa-star-half-alt fa-sm"></i>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4 d-none d-lg-block">
+              <img
+                class="rounded-circle shadow-1-strong mb-4"
+                src="profile.webp"
+                alt="avatar"
+                style="width: 150px;"
+              />
+              <h5 class="mb-3" style="color: #059dff; font-family: Oswald">Sabahat Shoaib</h5>
+              <p style="color: #059dff; font-family: Oswald">CE- 21302</p>
+              <p class="text-muted">
+                <i class="fas fa-quote-left pe-2"></i>
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                praesentium voluptatum deleniti atque corrupti.
+              </p>
+              <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                <li><i class="fas fa-star fa-sm"></i></li>
+                <li><i class="fas fa-star fa-sm"></i></li>
+                <li><i class="fas fa-star fa-sm"></i></li>
+                <li><i class="fas fa-star fa-sm"></i></li>
+                <li><i class="far fa-star fa-sm"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Inner -->
+  </div>
+  <!-- Carousel wrapper -->
+  <!-- End your project here-->
+
+
+
+
+<!-- MARQUEE START -->
+
+
+  <style>
+    .marquee {
+        font-size: 50px;
+        text-transform: uppercase;
+        color: transparent;
+        font-family: "Oswald", serif;
+        font-weight: 900;
+    }
+    .sgg {
+        /* color: white; */
+    }
+    .marquee {
+        animation: name 50s linear infinite;
+        /* font-size: 30px; */
+        /* width: auto; */
+        display: inline-block;
+        /* display: block; */
+        /* white-space: nowrap; */
+        transform: translateX(-50%);
+    }
+    .ww {
+        white-space: nowrap;
+        /* display: inline-block; */
+    }
+    @keyframes name{
+        from{
+            transform: translateX(0%);
+        }
+        to{
+            transform: translateX(-50%);
+
+        }
+    }
+    .marquee:hover {
+        transform: none;
+    }
+</style>
+
+
+
+  <div class="marquee-container  g-0" style="overflow: hidden;">
+    <div class="marquee px-0 mx-0">
+        <span style="background-clip: text; background: linear-gradient(95deg, #059dff 15%, #6549d5 45%, #e33fa1 75%, #fb5343 100%); -webkit-background-clip: text;"><span class="px-0 mx-0 ww" style="color: ; width: auto;">SENSOR BASED WATER QUALITY MONITORING USING IoT & REAL TIME </span></span><span style="background-clip: text; background: linear-gradient(95deg, #059dff 15%, #6549d5 45%, #e33fa1 75%, #fb5343 100%); -webkit-background-clip: text;"><span class="px-0 mx-0 ww"  style="color: ; width: auto;">SENSOR BASED WATER QUALITY MONITORING USING IoT & REAL TIME</span></span>
+    </div>
+</div>
+
+
+
+<!-- MARQUEE END -->
+
+
+
+
+<!-- FOOTER  START-->
+
+
+  <div class="container-fluid py-5 px-0" style="color: white; background-color: #181f4a17; border-top: 1px solid pink;">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="d-flex flex-column col-lg-3 col-md-12 order-lg-0 order-sm-1 col-sm-6 order-2 justify-content-between  align-items-md-center align-items-lg-start align-items-center align-items-sm-start mt-lg-0 mt-sm-5 mt-4">
+                <img src="NED Logo.png" alt="" style="width: 80px;" class="mb-lg-0 mb-3">   
+                <span  style="color: gray; text-align: center;">© 2025 <span style="border-bottom: 2px solid white; color: white;">Crafto</span></span>         
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="d-flex flex-column justify-content-between h-100">
+                    <div class="d-flex flex-column  align-items-center align-items-sm-start mb-sm-0 mb-2">
+                        <span class="mb-1" style="color: gray;">Need your live support?</span>
+                        <span class="">info@yourdomain.com</span>
+                    </div>
+                    <div class="d-flex flex-column  align-items-center align-items-sm-start  mt-sm-0 mt-2">
+                        <span class="mb-1" style="color: gray;">Toll free customer care</span>
+                        <span class="">1-800-222-000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mt-4 mt-sm-0">
+                <div class="d-flex flex-column   align-items-center align-items-sm-start">
+                    <span>Sign up for the Newsletter</span>
+                    <span class="d-flex ms-2 ms-sm-0 py-sm-2 py-3 px-2 justify-content-between my-3 align-self-sm-start align-self-stretch" style="background-color: transparent; border: 1px solid #dc3545; font-size: 15px;">
+                        <span class="" style="color: gray;"><input class="ms-2" type="email" placeholder="Enter your email" style="background-color: transparent; color: white; border: 0px solid red; outline: none;"></span>
+                        <!-- <span class="ms-4">Submit <i class="fa-solid fa-arrow-right"></i> -->
+                        </span>
+                    </span>
+                    <span style="color: gray;">Protecting your privacy</span>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 order-md-0 order-sm-2 order-1 mt-md-0 mt-sm-5 mt-4">
+                <div class="d-flex flex-column   align-items-center align-items-sm-start">
+                    <span class="mb-2">Social connect</span>
+                    <span class="mt-1" style="font-size: 23px;">
+                        <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-twitter"></i> <i class="fa-solid fa-globe"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- FOOTER  END-->
+
+
+
+ <script src="app.js"></script>
+
+</body>
+</html>
